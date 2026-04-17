@@ -1,10 +1,10 @@
 <?php
 
 define('SITE_URL',  'https://zaazplanos.com.br');
-define('SITE_NAME', 'ZaazPlanos');
+define('SITE_NAME', 'ZAAZ Internet Fibra');
 define('SITE_LANG', 'pt-BR');
+define('WHATSAPP',  'https://wa.me/5500000000000'); // ← atualize com o número real
 
-// Ambiente: 'production' | 'development'
 define('ENV', 'production');
 
 if (ENV === 'development') {
