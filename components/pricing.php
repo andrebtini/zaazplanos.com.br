@@ -1,38 +1,64 @@
-<section id="planos" style="background:var(--color-surface)" aria-labelledby="pricing-heading">
+<section id="planos" class="pricing-section" aria-labelledby="pricing-heading">
     <div class="container text-center">
         <span class="section-label">Planos</span>
-        <h2 class="section-title" id="pricing-heading" style="margin-inline:auto">Preços simples e transparentes</h2>
-        <p class="section-desc" style="margin-inline:auto">Sem taxas escondidas. Cancele quando quiser.</p>
+        <h2 class="section-title" id="pricing-heading" style="margin-inline:auto">Internet fibra para o seu ritmo</h2>
+        <p class="section-desc" style="margin-inline:auto">Consumo ilimitado, Wi-Fi 6 incluso e sem fidelidade obrigatória.</p>
 
         <div class="pricing-grid">
             <?php
             $plans = [
                 [
-                    'name'     => 'Starter',
-                    'price'    => 'R$ 97',
+                    'name'     => '600 Mega',
+                    'speed'    => '600',
+                    'price'    => 'R$&nbsp;89,90',
                     'period'   => '/mês',
-                    'desc'     => 'Ideal para quem está começando.',
-                    'features' => ['Até 3 usuários', '5 GB de armazenamento', 'Suporte por e-mail', 'Relatórios básicos'],
+                    'desc'     => 'Ideal para uso doméstico com múltiplos dispositivos.',
+                    'features' => [
+                        'Download até 600 Mbps',
+                        'Upload até 300 Mbps',
+                        'Consumo ilimitado',
+                        'Roteador Wi-Fi 6 incluso',
+                        'Zaaz Play + Zaaz Educa',
+                        'Suporte técnico 24h',
+                    ],
                     'featured' => false,
-                    'cta'      => 'Começar agora',
+                    'cta'      => 'Contratar agora',
                 ],
                 [
-                    'name'     => 'Pro',
-                    'price'    => 'R$ 197',
+                    'name'     => '800 Mega',
+                    'speed'    => '800',
+                    'price'    => 'R$&nbsp;109,90',
                     'period'   => '/mês',
-                    'desc'     => 'Para negócios em crescimento.',
-                    'features' => ['Usuários ilimitados', '50 GB de armazenamento', 'Suporte prioritário', 'Relatórios avançados', 'Integrações premium'],
+                    'desc'     => 'Para quem não abre mão de velocidade no dia a dia.',
+                    'features' => [
+                        'Download até 800 Mbps',
+                        'Upload até 400 Mbps',
+                        'Consumo ilimitado',
+                        'Roteador Wi-Fi 6 incluso',
+                        'Zaaz Play + Zaaz Educa',
+                        'Suporte técnico 24h',
+                        'IP fixo opcional',
+                    ],
                     'featured' => true,
-                    'cta'      => 'Escolher Pro',
+                    'cta'      => 'Quero 800 Mega',
                 ],
                 [
-                    'name'     => 'Enterprise',
-                    'price'    => 'Sob consulta',
-                    'period'   => '',
-                    'desc'     => 'Solução personalizada para grandes times.',
-                    'features' => ['Tudo do Pro', 'SLA garantido', 'Gerente de conta dedicado', 'Customizações exclusivas'],
+                    'name'     => '1 Giga',
+                    'speed'    => '1000',
+                    'price'    => 'R$&nbsp;139,90',
+                    'period'   => '/mês',
+                    'desc'     => 'Máxima performance para home office e streaming 4K.',
+                    'features' => [
+                        'Download até 1 Gbps',
+                        'Upload até 500 Mbps',
+                        'Consumo ilimitado',
+                        'Roteador Wi-Fi 6 AX incluso',
+                        'Zaaz Play + Zaaz Educa',
+                        'Suporte técnico 24h',
+                        'IP fixo incluso',
+                    ],
                     'featured' => false,
-                    'cta'      => 'Falar com vendas',
+                    'cta'      => 'Quero 1 Giga',
                 ],
             ];
 
@@ -48,7 +74,7 @@
                 <p style="color:var(--color-muted);margin-top:.25rem;font-size:.9rem"><?= htmlspecialchars($plan['desc']) ?></p>
 
                 <p class="plan-price" itemprop="price">
-                    <?= htmlspecialchars($plan['price']) ?>
+                    <?= $plan['price'] ?>
                     <span itemprop="priceCurrency" content="BRL"><?= htmlspecialchars($plan['period']) ?></span>
                 </p>
 
@@ -58,11 +84,19 @@
                     <?php endforeach; ?>
                 </ul>
 
-                <a href="#contato" class="btn <?= $plan['featured'] ? 'btn-primary' : '' ?>" style="<?= !$plan['featured'] ? 'background:var(--color-surface);border:2px solid var(--color-primary);color:var(--color-primary);' : '' ?>width:100%;justify-content:center">
+                <a href="<?= WHATSAPP ?>&text=<?= urlencode('Olá! Tenho interesse no plano ' . $plan['name'] . ' da ZAAZ.') ?>"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn <?= $plan['featured'] ? 'btn-primary' : 'btn-outline' ?>"
+                   style="width:100%;justify-content:center"
+                   data-plan="<?= htmlspecialchars($plan['name']) ?>">
                     <?= htmlspecialchars($plan['cta']) ?>
                 </a>
             </div>
             <?php endforeach; ?>
         </div>
+
+        <p style="margin-top:2rem;font-size:.85rem;color:var(--color-muted)">
+            * Instalação gratuita. Preços válidos para residências nas áreas de cobertura MG, PR e SP.
+        </p>
     </div>
 </section>
