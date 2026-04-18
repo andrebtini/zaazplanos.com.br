@@ -18,8 +18,9 @@ $seo = new SEO([
 
     <?= $seo->renderMeta() ?>
 
-    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" sizes="32x32">
     <link rel="apple-touch-icon" href="/assets/img/favicon.png">
+    <link rel="shortcut icon" href="/assets/img/favicon.png">
 
     <style><?php readfile('assets/css/critical.css'); ?></style>
 
