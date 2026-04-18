@@ -4,10 +4,7 @@
 document.querySelectorAll('[data-widget]').forEach(btn => {
     btn.addEventListener('click', e => {
         e.preventDefault();
-        const widgetBtn = document.querySelector(
-            '[class*="whatsapp"], [class*="widget"], [id*="whatsapp"], [id*="widget"], ' +
-            'a[href*="wa.me"], a[href*="whatsapp"]'
-        );
+        const widgetBtn = document.getElementById('wl-btn');
         if (widgetBtn) {
             widgetBtn.click();
         }
