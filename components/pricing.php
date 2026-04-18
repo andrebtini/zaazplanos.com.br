@@ -84,8 +84,7 @@
                     <?php endforeach; ?>
                 </ul>
 
-                <a href="<?= WHATSAPP ?>&text=<?= urlencode('Olá! Tenho interesse no plano ' . $plan['name'] . ' da ZAAZ.') ?>"
-                   target="_blank" rel="noopener noreferrer"
+                <a href="#"
                    class="btn <?= $plan['featured'] ? 'btn-primary' : 'btn-outline' ?>"
                    style="width:100%;justify-content:center"
                    data-plan="<?= htmlspecialchars($plan['name']) ?>"

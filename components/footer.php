@@ -4,8 +4,7 @@
             <div>
                 <img src="/assets/img/logo-zaaz.svg" alt="ZAAZ Internet Fibra" width="120" height="34" loading="lazy" style="filter:brightness(0) invert(1);margin-bottom:.875rem">
                 <p>Fibra óptica para MG, PR e SP.<br>Consumo ilimitado, Wi-Fi 6 e suporte 24h.</p>
-                <a href="<?= WHATSAPP ?>" target="_blank" rel="noopener noreferrer"
-                   class="btn btn-wa" style="margin-top:1.25rem;font-size:.875rem;padding:.6rem 1.25rem" data-widget>
+                <a href="#" class="btn btn-wa" style="margin-top:1.25rem;font-size:.875rem;padding:.6rem 1.25rem" data-widget>
                     WhatsApp
                 </a>
             </div>

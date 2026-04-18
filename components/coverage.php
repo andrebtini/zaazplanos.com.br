@@ -45,9 +45,7 @@
             <div class="coverage-cta-box">
                 <p class="coverage-cta-title">Minha cidade tem cobertura?</p>
                 <p>Consulte a disponibilidade no seu endereço antes de contratar. É rápido e gratuito.</p>
-                <a href="<?= WHATSAPP ?>&text=<?= urlencode('Olá! Quero verificar se meu endereço tem cobertura ZAAZ.') ?>"
-                   target="_blank" rel="noopener noreferrer"
-                   class="btn btn-primary" data-widget>
+                <a href="#" class="btn btn-primary" data-widget>
                     Verificar meu endereço
                 </a>
             </div>
