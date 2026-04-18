@@ -28,6 +28,8 @@ $seo = new SEO([
     <noscript><link rel="stylesheet" href="/assets/css/main.css"></noscript>
 
     <?= $seo->renderSchema() ?>
+
+    <script src="http://marketingsuite.com.br/api/leads_widget.php?p=prj0c91a001813d8207" defer></script>
 </head>
 <body>
 

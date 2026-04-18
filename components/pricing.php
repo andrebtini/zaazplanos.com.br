@@ -88,7 +88,8 @@
                    target="_blank" rel="noopener noreferrer"
                    class="btn <?= $plan['featured'] ? 'btn-primary' : 'btn-outline' ?>"
                    style="width:100%;justify-content:center"
-                   data-plan="<?= htmlspecialchars($plan['name']) ?>">
+                   data-plan="<?= htmlspecialchars($plan['name']) ?>"
+                   data-widget>
                     <?= htmlspecialchars($plan['cta']) ?>
                 </a>
             </div>

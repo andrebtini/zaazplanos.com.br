@@ -1,5 +1,19 @@
 // Carrega apenas quando o DOM estiver pronto (defer garante isso)
 
+// Intercepta cliques nos botões de WhatsApp e abre o widget
+document.querySelectorAll('[data-widget]').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        const widgetBtn = document.querySelector(
+            '[class*="whatsapp"], [class*="widget"], [id*="whatsapp"], [id*="widget"], ' +
+            'a[href*="wa.me"], a[href*="whatsapp"]'
+        );
+        if (widgetBtn) {
+            widgetBtn.click();
+        }
+    });
+});
+
 // Smooth scroll para âncoras
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {

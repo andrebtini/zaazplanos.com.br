@@ -47,7 +47,7 @@
                 <p>Consulte a disponibilidade no seu endereço antes de contratar. É rápido e gratuito.</p>
                 <a href="<?= WHATSAPP ?>&text=<?= urlencode('Olá! Quero verificar se meu endereço tem cobertura ZAAZ.') ?>"
                    target="_blank" rel="noopener noreferrer"
-                   class="btn btn-primary">
+                   class="btn btn-primary" data-widget>
                     Verificar meu endereço
                 </a>
             </div>
