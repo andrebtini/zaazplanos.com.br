@@ -96,10 +96,8 @@ body { font-family: var(--font); color: var(--text); background: var(--bg); line
 
 .btn-lg { padding: 1rem 2rem; font-size: 1rem; }
 
-/* ── Seção pricing (above fold no desktop) ────────────────── */
-.pricing-section { padding: 5rem 0 4rem; background: var(--surface); }
-
-.pricing-section .section-header { text-align: center; margin-bottom: 3rem; }
+/* ── Seção pricing (hero) ──────────────────────────────── */
+.pricing-section { padding: 0 0 4rem; background: var(--surface); }
 
 .section-label {
     display: inline-block;

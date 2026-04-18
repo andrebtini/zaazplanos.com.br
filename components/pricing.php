@@ -1,16 +1,23 @@
-<section id="planos" class="pricing-section" aria-labelledby="pricing-heading">
-    <div class="container text-center">
-        <span class="section-label">Planos</span>
-        <h2 class="section-title" id="pricing-heading" style="margin-inline:auto">Internet fibra para o seu ritmo</h2>
-        <p class="section-desc" style="margin-inline:auto">Consumo ilimitado, Wi-Fi 6 incluso e sem fidelidade obrigatória.</p>
+<section id="planos" class="pricing-section" aria-label="Planos de internet fibra ZAAZ">
 
+    <div class="trust-bar" aria-hidden="true">
+        <div class="container">
+            <span>⚡ Fibra óptica 100%</span>
+            <span>∞ Consumo ilimitado</span>
+            <span>📶 Wi-Fi 6 incluso</span>
+            <span>🔧 Instalação gratuita</span>
+            <span>📅 Sem fidelidade</span>
+        </div>
+    </div>
+
+    <div class="container">
         <div class="pricing-grid">
             <?php
             $plans = [
                 [
                     'name'     => '600 Mega',
-                    'speed'    => '600',
-                    'price'    => 'R$&nbsp;89,90',
+                    'badge'    => null,
+                    'price'    => '89,90',
                     'period'   => '/mês',
                     'desc'     => 'Ideal para uso doméstico com múltiplos dispositivos.',
                     'features' => [
@@ -26,8 +33,8 @@
                 ],
                 [
                     'name'     => '800 Mega',
-                    'speed'    => '800',
-                    'price'    => 'R$&nbsp;109,90',
+                    'badge'    => 'Mais popular',
+                    'price'    => '109,90',
                     'period'   => '/mês',
                     'desc'     => 'Para quem não abre mão de velocidade no dia a dia.',
                     'features' => [
@@ -44,8 +51,8 @@
                 ],
                 [
                     'name'     => '1 Giga',
-                    'speed'    => '1000',
-                    'price'    => 'R$&nbsp;139,90',
+                    'badge'    => null,
+                    'price'    => '139,90',
                     'period'   => '/mês',
                     'desc'     => 'Máxima performance para home office e streaming 4K.',
                     'features' => [
@@ -63,40 +70,48 @@
             ];
 
             foreach ($plans as $plan):
-                $class = $plan['featured'] ? 'plan featured' : 'plan';
             ?>
-            <div class="<?= $class ?>" itemscope itemtype="https://schema.org/Offer">
-                <?php if ($plan['featured']): ?>
-                <span class="section-label" style="margin-bottom:.75rem">Mais popular</span>
+            <div class="plan<?= $plan['featured'] ? ' featured' : '' ?>" itemscope itemtype="https://schema.org/Offer">
+
+                <?php if ($plan['badge']): ?>
+                <div class="plan-badge"><?= htmlspecialchars($plan['badge']) ?></div>
                 <?php endif; ?>
 
-                <h3 itemprop="name" style="font-size:1.25rem;font-weight:700"><?= htmlspecialchars($plan['name']) ?></h3>
-                <p style="color:var(--color-muted);margin-top:.25rem;font-size:.9rem"><?= htmlspecialchars($plan['desc']) ?></p>
+                <div class="plan-header">
+                    <h2 itemprop="name" class="plan-name"><?= htmlspecialchars($plan['name']) ?></h2>
+                    <p class="plan-desc"><?= htmlspecialchars($plan['desc']) ?></p>
+                </div>
 
-                <p class="plan-price" itemprop="price">
-                    <?= $plan['price'] ?>
-                    <span itemprop="priceCurrency" content="BRL"><?= htmlspecialchars($plan['period']) ?></span>
-                </p>
+                <div class="plan-price-wrap">
+                    <span class="plan-currency">R$</span>
+                    <span class="plan-price" itemprop="price"><?= htmlspecialchars($plan['price']) ?></span>
+                    <span class="plan-period" itemprop="priceCurrency" content="BRL"><?= htmlspecialchars($plan['period']) ?></span>
+                </div>
 
-                <ul>
+                <ul class="plan-features">
                     <?php foreach ($plan['features'] as $feat): ?>
-                    <li><?= htmlspecialchars($feat) ?></li>
+                    <li>
+                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <?= htmlspecialchars($feat) ?>
+                    </li>
                     <?php endforeach; ?>
                 </ul>
 
                 <a href="#"
-                   class="btn <?= $plan['featured'] ? 'btn-primary' : 'btn-outline' ?>"
-                   style="width:100%;justify-content:center"
+                   class="btn plan-btn<?= $plan['featured'] ? ' btn-white' : ' btn-outline' ?>"
                    data-plan="<?= htmlspecialchars($plan['name']) ?>"
                    data-widget>
                     <?= htmlspecialchars($plan['cta']) ?>
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
                 </a>
             </div>
             <?php endforeach; ?>
         </div>
 
-        <p style="margin-top:2rem;font-size:.85rem;color:var(--color-muted)">
-            * Instalação gratuita. Preços válidos para residências nas áreas de cobertura MG, PR e SP.
-        </p>
+        <p class="pricing-note">* Instalação gratuita. Preços válidos para residências nas áreas de cobertura MG, PR e SP.</p>
     </div>
 </section>
