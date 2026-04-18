@@ -1,7 +1,7 @@
 <header class="site-header" role="banner">
     <div class="container">
         <a href="/" aria-label="ZAAZ Internet Fibra — Início">
-            <img src="/assets/img/logo-zaaz.svg" alt="ZAAZ Internet Fibra" width="140" height="40" loading="eager" fetchpriority="high">
+            <img src="/assets/img/logo-zaaz.svg" alt="ZAAZ Internet Fibra" width="180" height="52" loading="eager" fetchpriority="high">
         </a>
 
         <nav aria-label="Navegação principal">
