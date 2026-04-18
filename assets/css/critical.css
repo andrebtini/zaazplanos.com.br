@@ -44,8 +44,8 @@ body { font-family: var(--font); color: var(--text); background: var(--bg); line
     position: sticky;
     top: 0;
     z-index: 100;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
+    background: #2B2678;
+    border-bottom: 1px solid rgba(255,255,255,.08);
     padding: .875rem 0;
 }
 
@@ -59,8 +59,8 @@ body { font-family: var(--font); color: var(--text); background: var(--bg); line
 .site-header .logo img { display: block; height: 36px; width: auto; }
 
 .nav { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
-.nav a { text-decoration: none; color: var(--muted); font-size: .9rem; font-weight: 500; transition: color .15s; }
-.nav a:hover { color: var(--primary); }
+.nav a { text-decoration: none; color: rgba(255,255,255,.75); font-size: .9rem; font-weight: 500; transition: color .15s; }
+.nav a:hover { color: #fff; }
 
 /* ── Botões ───────────────────────────────────────────────── */
 .btn {
