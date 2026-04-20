@@ -1,21 +1,10 @@
 // Carrega apenas quando o DOM estiver pronto (defer garante isso)
 
-// Abre o painel do widget MarketingSuite
-function openLeadsWidget() {
-    var panel = document.getElementById('wl-panel');
-    if (!panel) return;
-    panel.classList.add('wl-open');
-    setTimeout(function () {
-        var first = document.querySelector('#wl-body .wl-f');
-        if (first) first.focus();
-    }, 260);
-}
-
-// Intercepta cliques nos botões de WhatsApp e abre o widget
+// Intercepta cliques nos botões e abre o widget MarketingSuite
 document.querySelectorAll('[data-widget]').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
         e.preventDefault();
-        openLeadsWidget();
+        if (typeof wlOpen === 'function') wlOpen();
     });
 });
 
