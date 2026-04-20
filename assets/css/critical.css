@@ -59,7 +59,7 @@ body { font-family: var(--font); color: var(--text); background: var(--bg); line
 }
 
 .nav { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
-.nav a { text-decoration: none; color: #fff; font-size: .9rem; font-weight: 600; transition: opacity .15s; }
+.nav a { text-decoration: none; color: #fff; font-size: 1rem; font-weight: 700; letter-spacing: .01em; transition: opacity .15s; }
 .nav a:hover { opacity: .75; }
 
 /* ── Botões ───────────────────────────────────────────────── */
