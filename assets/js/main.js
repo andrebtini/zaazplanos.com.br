@@ -4,7 +4,8 @@
 document.querySelectorAll('[data-widget]').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
         e.preventDefault();
-        if (typeof wlOpen === 'function') wlOpen();
+        var trigger = document.querySelector('[data-wl-open]');
+        if (trigger) trigger.click();
     });
 });
 
