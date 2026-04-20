@@ -1,12 +1,12 @@
 // Carrega apenas quando o DOM estiver pronto (defer garante isso)
 
 // Intercepta cliques nos botões e abre o widget MarketingSuite
-document.querySelectorAll('[data-widget]').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        var trigger = document.getElementById('wl-btn');
-        if (trigger) trigger.click();
-    });
+document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-widget]');
+    if (!btn) return;
+    e.preventDefault();
+    var trigger = document.getElementById('wl-btn');
+    if (trigger) trigger.click();
 });
 
 // Smooth scroll para âncoras (exclui botões de widget e href="#")
