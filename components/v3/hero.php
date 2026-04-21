@@ -69,9 +69,5 @@
         </div>
     </div>
 
-    <div class="v3-scroll-cue" aria-hidden="true">
-        <div class="v3-scroll-line"></div>
-        <span>scroll</span>
-    </div>
 
 </section>
