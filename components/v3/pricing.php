@@ -1,44 +1,26 @@
 <section id="planos" class="v3-pricing" aria-labelledby="v3-pricing-heading">
 
     <!-- Trust bar ticker -->
+    <?php
+    $items = [
+        'Fibra óptica 100%',
+        'Consumo ilimitado',
+        'Wi-Fi 6 incluso',
+        'Instalação gratuita',
+        'Sem fidelidade',
+        'Suporte 24h',
+        'Zaaz Play incluso',
+        'Zaaz Educa incluso',
+    ];
+    ?>
     <div class="v3-trust-bar" aria-hidden="true">
-        <div class="v3-trust-track">
-            <?php
-            $items = [
-                'Fibra óptica 100%',
-                'Consumo ilimitado',
-                'Wi-Fi 6 incluso',
-                'Instalação gratuita',
-                'Sem fidelidade',
-                'Suporte 24h',
-                'Zaaz Play incluso',
-                'Zaaz Educa incluso',
-            ];
-            foreach ($items as $item):
-            ?>
+        <div class="v3-trust-inner">
+            <?php for ($i = 0; $i < 2; $i++): foreach ($items as $item): ?>
             <span class="v3-trust-item">
                 <span class="v3-trust-dot"></span>
                 <?= htmlspecialchars($item) ?>
             </span>
-            <?php endforeach; ?>
-        </div>
-        <div class="v3-trust-track v3-trust-track--clone" aria-hidden="true">
-            <?php foreach ($items as $item): ?>
-            <span class="v3-trust-item">
-                <span class="v3-trust-dot"></span>
-                <?= htmlspecialchars($item) ?>
-            </span>
-            <?php endforeach; ?>
-        </div>
-    </div>
-
-    <div class="v3-pricing-head">
-        <div class="container">
-            <span class="section-label">Planos</span>
-            <h2 class="section-title" id="v3-pricing-heading">
-                ESCOLHA SUA<br>VELOCIDADE.
-            </h2>
-            <p class="section-desc">Preço que você vê é o que você paga. Sem taxas escondidas, sem fidelidade.</p>
+            <?php endforeach; endfor; ?>
         </div>
     </div>
 

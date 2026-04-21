@@ -11,7 +11,6 @@ section { padding: 5.5rem 0; position: relative; }
     border-bottom: 1px solid var(--border);
     padding: .8rem 0;
     overflow: hidden;
-    white-space: nowrap;
     position: relative;
 }
 
@@ -27,19 +26,15 @@ section { padding: 5.5rem 0; position: relative; }
 .v3-trust-bar::before { left: 0; background: linear-gradient(to right, var(--bg-2), transparent); }
 .v3-trust-bar::after  { right: 0; background: linear-gradient(to left, var(--bg-2), transparent); }
 
-.v3-trust-track {
-    display: inline-flex;
-    gap: 0;
-    animation: v3-ticker 28s linear infinite;
-}
-
-.v3-trust-track--clone {
-    animation-delay: -14s;
+.v3-trust-inner {
+    display: flex;
+    width: max-content;
+    animation: v3-ticker 24s linear infinite;
 }
 
 @keyframes v3-ticker {
     from { transform: translateX(0); }
-    to   { transform: translateX(-100%); }
+    to   { transform: translateX(-50%); }
 }
 
 .v3-trust-item {
@@ -63,17 +58,9 @@ section { padding: 5.5rem 0; position: relative; }
 
 /* ──────────────── PRICING SECTION ──────────────── */
 .v3-pricing {
-    padding: 0 0 6rem;
+    padding: 3rem 0 5rem;
     background: var(--bg);
 }
-
-.v3-pricing-head {
-    padding: 3rem 0 3rem;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 3.5rem;
-}
-
-.v3-pricing-head .section-title { margin-top: .5rem; }
 
 .v3-plans-grid {
     display: grid;
