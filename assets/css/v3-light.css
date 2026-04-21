@@ -1,0 +1,201 @@
+/* v3-light.css — ZAAZ v3 tema claro */
+
+body.v3-light {
+    --bg:        #F5F4F0;
+    --bg-2:      #ECEAE4;
+    --surface:   #FFFFFF;
+    --card:      #FFFFFF;
+    --card-h:    #F8F7F2;
+
+    --primary:      #FFEC00;
+    --primary-dk:   #D4C400;
+    --primary-lt:   rgba(255,236,0,.18);
+    --primary-glow: rgba(255,236,0,.35);
+
+    --signal:       #16A34A;
+    --signal-dim:   rgba(22,163,74,.08);
+    --signal-glow:  rgba(22,163,74,.22);
+
+    --text:    #1A1910;
+    --muted:   #6B6A60;
+    --subtle:  #B0AFA6;
+
+    --border:     rgba(0,0,0,.1);
+    --border-hot: rgba(180,165,0,.4);
+
+    --color-primary:    #FFEC00;
+    --color-primary-dk: #D4C400;
+    --color-primary-lt: rgba(255,236,0,.18);
+    --color-accent:     #16A34A;
+    --color-dark:       #1A1910;
+    --color-text:       #1A1910;
+    --color-muted:      #6B6A60;
+    --color-bg:         #F5F4F0;
+    --color-surface:    #FFFFFF;
+    --color-border:     rgba(0,0,0,.1);
+
+    background: #F5F4F0;
+    color: #1A1910;
+}
+
+/* ── Header light ── */
+body.v3-light .v3-header {
+    background: rgba(245,244,240,.95);
+    border-bottom-color: rgba(0,0,0,.1);
+}
+body.v3-light .v3-header.scrolled {
+    background: rgba(245,244,240,.99);
+    border-bottom-color: rgba(180,165,0,.3);
+}
+body.v3-light .v3-logo {
+    filter: none;
+}
+body.v3-light .v3-nav a { color: var(--muted); }
+body.v3-light .v3-nav a:hover { color: var(--text); }
+
+body.v3-light .v3-hamburger {
+    background: var(--card);
+    border-color: var(--border);
+}
+body.v3-light .v3-hamburger span { background: var(--text); }
+
+/* ── Buttons light ── */
+body.v3-light .btn-outline {
+    color: var(--muted);
+    border-color: rgba(0,0,0,.18);
+}
+body.v3-light .btn-outline:hover {
+    color: var(--text);
+    border-color: var(--primary-dk);
+    background: var(--primary-lt);
+}
+body.v3-light .btn-dark {
+    background: var(--card);
+    color: var(--text);
+    border-color: var(--border);
+}
+body.v3-light .btn-dark:hover {
+    background: var(--card-h);
+    border-color: var(--border-hot);
+}
+
+/* ── Section label light ── */
+body.v3-light .section-label {
+    background: rgba(22,163,74,.08);
+    color: #16A34A;
+    border-color: rgba(22,163,74,.2);
+}
+body.v3-light .section-title { color: var(--text); }
+body.v3-light .section-desc  { color: var(--muted); }
+
+/* ── Pricing light ── */
+body.v3-light .v3-pricing { background: var(--bg); }
+
+body.v3-light .v3-plan {
+    background: var(--card);
+    border-color: rgba(0,0,0,.1);
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+body.v3-light .v3-plan:hover {
+    border-color: rgba(180,165,0,.35);
+    box-shadow: 0 8px 32px rgba(0,0,0,.1);
+}
+
+/* Plano destaque: mantém fundo escuro para contraste máximo */
+body.v3-light .v3-plan--featured {
+    background: #1A1910;
+    border-color: var(--primary);
+    box-shadow:
+        0 0 0 1px rgba(255,236,0,.3),
+        0 16px 48px rgba(0,0,0,.15);
+}
+body.v3-light .v3-plan--featured:hover {
+    box-shadow:
+        0 0 0 1px rgba(255,236,0,.45),
+        0 24px 60px rgba(0,0,0,.2);
+}
+body.v3-light .v3-plan--featured .v3-plan-features li { color: rgba(238,234,224,.75); }
+body.v3-light .v3-plan--featured .v3-plan-period      { color: rgba(238,234,224,.5); }
+body.v3-light .v3-plan--featured .v3-plan-desc        { color: rgba(238,234,224,.6); }
+
+body.v3-light .v3-plan-name    { color: var(--text); }
+body.v3-light .v3-plan-desc    { color: var(--muted); }
+body.v3-light .v3-plan-period  { color: var(--muted); }
+body.v3-light .v3-plan-currency { color: var(--muted); }
+body.v3-light .v3-plan-price-num { color: var(--text); }
+body.v3-light .v3-plan-features li { color: var(--muted); }
+body.v3-light .v3-plan-speed-bar { background: rgba(0,0,0,.08); }
+body.v3-light .v3-plan-speed-label { color: var(--muted); }
+
+body.v3-light .v3-pricing-note { color: var(--subtle); }
+
+/* ── Benefits light ── */
+body.v3-light .v3-benefits { background: #ECEAE4; }
+body.v3-light .v3-benefits-grid { background: rgba(0,0,0,.06); border-color: rgba(0,0,0,.08); }
+body.v3-light .v3-benefit-card { background: var(--card); }
+body.v3-light .v3-benefit-card:hover { background: #F8F7F2; }
+body.v3-light .v3-benefit-card h3 { color: var(--text); }
+body.v3-light .v3-benefit-card p  { color: var(--muted); }
+body.v3-light .v3-benefit-icon {
+    background: rgba(255,236,0,.12);
+    border-color: rgba(180,165,0,.25);
+}
+body.v3-light .v3-benefit-card:hover .v3-benefit-icon {
+    background: rgba(255,236,0,.22);
+    box-shadow: 0 0 16px rgba(255,236,0,.2);
+}
+
+/* ── Howto light ── */
+body.v3-light .v3-howto { background: var(--bg); }
+body.v3-light .v3-steps { border-color: rgba(0,0,0,.08); background: rgba(0,0,0,.06); }
+body.v3-light .v3-step { background: var(--card); border-color: rgba(0,0,0,.08); }
+body.v3-light .v3-step:hover { background: #F8F7F2; }
+body.v3-light .v3-step-content h3 { color: var(--text); }
+body.v3-light .v3-step-content p  { color: var(--muted); }
+
+/* ── FAQ light ── */
+body.v3-light .v3-faq { background: #ECEAE4; }
+body.v3-light .v3-faq-list { border-color: rgba(0,0,0,.08); }
+body.v3-light .v3-faq-item { background: var(--card); border-color: rgba(0,0,0,.08); }
+body.v3-light .v3-faq-item[open] { background: #F8F7F2; }
+body.v3-light .v3-faq-summary { color: var(--text); }
+body.v3-light .v3-faq-item[open] .v3-faq-summary { color: #8B7A00; }
+body.v3-light .v3-faq-body { color: var(--muted); }
+
+/* ── Coverage light ── */
+body.v3-light .v3-coverage { background: var(--bg); }
+body.v3-light .v3-coverage-states { background: rgba(0,0,0,.06); border-color: rgba(0,0,0,.08); }
+body.v3-light .v3-coverage-state { background: var(--card); }
+body.v3-light .v3-state-name { color: var(--text); }
+body.v3-light .v3-city-list li { color: var(--muted); }
+body.v3-light .v3-coverage-cta-box { background: var(--card); border-color: rgba(180,165,0,.3); }
+body.v3-light .v3-coverage-cta-box p:first-of-type { color: var(--text); }
+body.v3-light .v3-coverage-cta-box p:last-of-type  { color: var(--muted); }
+
+/* ── CTA light ── */
+body.v3-light .v3-cta-section { background: #1A1910; }
+body.v3-light .v3-cta-section h2  { color: #F5F4F0; }
+body.v3-light .v3-cta-section > .container > p { color: rgba(245,244,240,.6); }
+
+/* ── Footer light ── */
+body.v3-light .v3-footer { background: #1A1910; border-top-color: rgba(255,255,255,.08); }
+body.v3-light .v3-footer-brand p { color: rgba(245,244,240,.55); }
+body.v3-light .v3-footer-brand img { filter: brightness(0) invert(1); }
+body.v3-light .v3-footer-col strong { color: #F5F4F0; }
+body.v3-light .v3-footer-col a { color: rgba(245,244,240,.5); }
+body.v3-light .v3-footer-col a:hover { color: var(--primary); }
+body.v3-light .v3-footer-bottom p { color: rgba(245,244,240,.3); }
+
+/* ── Mobile menu light ── */
+body.v3-light .v3-mobile-menu { background: rgba(245,244,240,.98); }
+body.v3-light .v3-mobile-menu ul a { color: var(--muted); }
+body.v3-light .v3-mobile-menu ul a:hover { color: #8B7A00; }
+body.v3-light .v3-mobile-close {
+    background: var(--card);
+    border-color: var(--border);
+    color: var(--muted);
+}
+
+/* ── Scroll reveal unchanged (animation only) ── */
+body.v3-light .v3-reveal { opacity: 0; transform: translateY(28px); }
+body.v3-light .v3-reveal.visible { opacity: 1; transform: none; }
