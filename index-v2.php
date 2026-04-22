@@ -33,7 +33,7 @@ $seo = new SEO([
 
     <?= $seo->renderSchema() ?>
 
-    <script src="https://marketingsuite.com.br/api/leads_widget.php?p=prj0b181fca9aa25e87" defer></script>
+    <script src="https://marketingsuite.com.br/api/leads_widget.php?p=prj3c5adaae2bfb36c8" defer></script>
 </head>
 <body>
 

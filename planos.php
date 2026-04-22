@@ -24,7 +24,7 @@ $seo = new SEO([
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style><?php readfile('assets/css/planos-critical.css'); ?></style>
 
@@ -33,7 +33,7 @@ $seo = new SEO([
 
     <?= $seo->renderSchema() ?>
 
-    <script src="https://marketingsuite.com.br/api/leads_widget.php?p=prj0b181fca9aa25e87" defer></script>
+    <script src="https://marketingsuite.com.br/api/leads_widget.php?p=prj3c5adaae2bfb36c8" defer></script>
 </head>
 <body>
 
