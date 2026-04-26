@@ -3,8 +3,8 @@ require_once 'includes/config.php';
 require_once 'includes/seo.php';
 
 $seo = new SEO([
-    'title'       => 'Planos de Internet Fibra ZAAZ — 600 Mega, 800 Mega e 1 Giga',
-    'description' => 'Contrate internet fibra ZAAZ com velocidades de 600 MB a 1 Giga, consumo ilimitado, Wi-Fi 6, Zaaz Play e Zaaz Educa. Planos residenciais para MG, PR e SP.',
+    'title'       => 'Planos de Internet Fibra ZAAZ — 300 Mega, 600 Mega, 800 Mega e 1 Giga',
+    'description' => 'Contrate internet fibra ZAAZ com velocidades de 300 MB a 1 Giga, consumo ilimitado, Wi-Fi 6, Zaaz Play e Zaaz Educa. Planos residenciais para MG, PR e SP.',
     'url'         => SITE_URL . '/',
     'image'       => SITE_URL . '/assets/img/og-image.jpg',
     'type'        => 'website',
