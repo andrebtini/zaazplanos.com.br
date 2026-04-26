@@ -71,7 +71,10 @@ section { padding: 4rem 0; }
     padding-top: 3rem;
     transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
     align-items: stretch;
+    position: relative;
 }
+
+.plan-carousel__vp { width: 100%; }
 
 /* ── Plan card ─────────────────────────────────────────── */
 .plan {
