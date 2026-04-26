@@ -83,3 +83,65 @@
     }
 
 })();
+
+// Plan carousel
+(function () {
+    function initCarousels() {
+        document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
+            var viewport = carousel.querySelector('[data-carousel-viewport]');
+            var track    = carousel.querySelector('[data-carousel-track]');
+            var slides   = carousel.querySelectorAll('[data-carousel-slide]');
+            var prevBtn  = carousel.querySelector('[data-carousel-prev]');
+            var nextBtn  = carousel.querySelector('[data-carousel-next]');
+            var dots     = carousel.querySelectorAll('[data-carousel-dot]');
+
+            if (!track || slides.length === 0) return;
+
+            var idx = 0;
+
+            function visible() { return window.innerWidth >= 960 ? 3 : 1; }
+            function maxIdx()  { return Math.max(0, slides.length - visible()); }
+
+            function setWidths() {
+                var vw  = viewport.offsetWidth;
+                var vis = visible();
+                var gap = vis > 1 ? (parseFloat(getComputedStyle(track).gap) || 24) : 0;
+                var w   = (vw - (vis - 1) * gap) / vis;
+                carousel.style.setProperty('--slide-w', w + 'px');
+            }
+
+            function go(n) {
+                idx = Math.max(0, Math.min(n, maxIdx()));
+                track.style.transform = 'translateX(-' + slides[idx].offsetLeft + 'px)';
+                if (prevBtn) prevBtn.disabled = idx === 0;
+                if (nextBtn) nextBtn.disabled = idx >= maxIdx();
+                var max = maxIdx();
+                dots.forEach(function (dot, i) {
+                    dot.style.display = i <= max ? '' : 'none';
+                    dot.classList.toggle('active', i === idx);
+                });
+            }
+
+            if (prevBtn) prevBtn.addEventListener('click', function () { go(idx - 1); });
+            if (nextBtn) nextBtn.addEventListener('click', function () { go(idx + 1); });
+            dots.forEach(function (dot, i) {
+                dot.addEventListener('click', function () { go(i); });
+            });
+
+            var resizeTimer;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function () { setWidths(); go(Math.min(idx, maxIdx())); }, 80);
+            }, { passive: true });
+
+            setWidths();
+            go(0);
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCarousels);
+    } else {
+        initCarousels();
+    }
+})();

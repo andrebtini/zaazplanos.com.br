@@ -25,7 +25,9 @@
     </div>
 
     <div class="container">
-        <div class="v3-plans-grid">
+        <div class="plan-carousel" data-carousel>
+            <div class="plan-carousel__vp" data-carousel-viewport>
+                <div class="v3-plans-grid" data-carousel-track>
             <?php
             $plans = [
                 [
@@ -112,6 +114,7 @@
             $featured_class = $plan['featured'] ? ' v3-plan--featured' : '';
             ?>
             <div class="v3-plan v3-reveal<?= $featured_class ?>"
+                 data-carousel-slide
                  style="--speed-w:<?= $plan['speed_w'] ?>"
                  itemscope itemtype="https://schema.org/Offer">
 
@@ -167,7 +170,23 @@
 
             </div>
             <?php endforeach; ?>
-        </div>
+                </div><!-- /track -->
+            </div><!-- /viewport -->
+            <div class="plan-carousel__footer">
+                <button class="plan-carousel__btn" data-carousel-prev disabled aria-label="Plano anterior">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </button>
+                <div class="plan-carousel__dots" role="tablist" aria-label="Navegar pelos planos">
+                    <?php for ($d = 0; $d < count($plans); $d++): ?>
+                    <button class="plan-carousel__dot<?= $d === 0 ? ' active' : '' ?>"
+                            data-carousel-dot role="tab" aria-label="Plano <?= $d + 1 ?>"></button>
+                    <?php endfor; ?>
+                </div>
+                <button class="plan-carousel__btn" data-carousel-next aria-label="Próximo plano">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div><!-- /plan-carousel -->
 
         <p class="v3-pricing-note">
             * Instalação gratuita. Preços válidos para residências nas áreas de cobertura MG, PR e SP.

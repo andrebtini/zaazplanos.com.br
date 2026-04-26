@@ -59,24 +59,24 @@ section { padding: 4rem 0; }
     background: var(--surface);
 }
 
+/* ── Carousel viewport ─────────────────────────────────── */
+.plan-carousel__vp {
+    overflow: hidden;
+}
+
 .pricing-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: nowrap;
     gap: 1.25rem;
     padding-top: 3rem;
+    transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
     align-items: stretch;
-}
-
-@media (min-width: 640px) {
-    .pricing-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (min-width: 960px) {
-    .pricing-grid { grid-template-columns: repeat(3, 1fr); align-items: start; }
 }
 
 /* ── Plan card ─────────────────────────────────────────── */
 .plan {
+    flex: 0 0 var(--slide-w, 100%);
+    min-width: 0;
     position: relative;
     background: #fff;
     border: 1.5px solid var(--border);
@@ -496,3 +496,59 @@ details p { margin-top: .75rem; color: var(--muted); line-height: 1.7; font-size
 /* ── Utilitários ───────────────────────────────────────── */
 .text-center { text-align: center; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+/* ── Carousel controls ──────────────────────────────────── */
+.plan-carousel__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.plan-carousel__btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border);
+    background: #fff;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background .2s, border-color .2s, color .2s;
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.plan-carousel__btn:hover:not(:disabled) {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.plan-carousel__btn:disabled { opacity: 0.32; cursor: default; }
+
+.plan-carousel__dots {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.plan-carousel__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: var(--border);
+    cursor: pointer;
+    padding: 0;
+    transition: background .22s, width .25s, border-radius .25s;
+}
+
+.plan-carousel__dot.active {
+    background: var(--primary);
+    width: 22px;
+    border-radius: 4px;
+}
