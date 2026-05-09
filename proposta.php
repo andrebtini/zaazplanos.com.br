@@ -13,6 +13,7 @@ $seo = new SEO([
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <?php include 'includes/gtm-head.php'; ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -37,6 +38,7 @@ $seo = new SEO([
     <script src="https://marketingsuite.com.br/api/leads_widget.php?p=prj679f382f8b60c5d1" defer></script>
 </head>
 <body class="v3-light">
+    <?php include 'includes/gtm-body.php'; ?>
 
     <?php include 'components/v3/header.php'; ?>
 
